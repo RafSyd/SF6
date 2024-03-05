@@ -1,0 +1,182 @@
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  font-family: Arial;
+}
+
+.navbar.md\:order-2,
+.navbar.md\:order-2 * {
+    color: black !important;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a #ccc background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ccc;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  position: relative; /* Added for positioning the close button */
+text-align: center;
+}
+
+/* Style the close button */
+.close-btn {
+  position: absolute;
+
+  background-color: #f44336;
+  color: red;
+  border: none;
+  font-size: 60px;
+  cursor: pointer;
+text-align: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: inline-block; /* Added to make buttons visible again */
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+display: inline-block; /* Display buttons as inline-block for center alignment */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: white;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 800px; /* Adjust the height as needed */
+
+}
+
+.work-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+#menu-toggle:checked + #menu {
+  display: block;
+}
+
+.hover\:grow {
+  transition: all 0.3s;
+  transform: scale(1);
+}
+
+.hover\:grow:hover {
+  transform: scale(1.02);
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #000;
+  /*Set to match the Tailwind colour you want the active one to be */
+}
